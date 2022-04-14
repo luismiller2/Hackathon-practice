@@ -8,6 +8,7 @@ var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 
 const mongoose = require("mongoose");
+const Studio = require("./models/Studio.models");
 
 var app = express();
 
@@ -24,23 +25,21 @@ app.use(express.static(path.join(__dirname, "public")));
 // app.use("/", indexRouter);
 // app.use("/users", usersRouter);
 
-
-app.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+app.get("/", function (req, res, next) {
+  res.render("index", { title: "Express" });
 });
 
-app.get('/studio', function(req, res, next) {
-  res.render('studio');
+app.get("/studio", function (req, res, next) {
+  res.render("studio");
 });
 
-app.get('/hello', function(req, res, next) {
-  res.rendgiter('hello');
+app.get("/hello", function (req, res, next) {
+  res.rendgiter("hello");
 });
 
 app.get("/aboutus", function (req, res, next) {
   res.render("aboutus");
 });
-
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -57,7 +56,6 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
-
 
 // mongoose
 mongoose
