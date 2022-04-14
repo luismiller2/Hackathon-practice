@@ -24,12 +24,20 @@ app.use(express.static(path.join(__dirname, "public")));
 // app.use("/", indexRouter);
 // app.use("/users", usersRouter);
 
-app.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
+
+/* GET home page. */
+app.get('/', function(req, res, next) {
+  res.render('index', { title: 'Express' });
 });
+
+app.get('/hello', function(req, res, next) {
+  res.render('hello');
+});
+
 app.get("/aboutus", function (req, res, next) {
   res.render("aboutus");
 });
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
