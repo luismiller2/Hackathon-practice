@@ -10,7 +10,7 @@ const studioSchema = new Schema(
       type: String,
     },
     cost: {
-      type: Number,
+      type: String,
     },
     phoneNumber: {
       type: String,

@@ -30,14 +30,15 @@ app.get("/", function (req, res, next) {
 });
 
 app.get("/studio", function (req, res, next) {
-  Studio.create(studios)
+  Studio.find()
     .then(function (results) {
       console.log("Success!", results);
+      res.render("studio", {studio: results});
     })
     .catch(function (err) {
       console.log("Something went wrong", err.message);
     });
-  res.render("studio");
+  // res.render("studio");
 });
 
 app.get("/hello", function (req, res, next) {
