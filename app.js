@@ -33,11 +33,11 @@ app.get("/studio", function (req, res, next) {
   Studio.create(studios)
     .then(function (results) {
       console.log("Success!", results);
+      res.render("studio");
     })
     .catch(function (err) {
       console.log("Something went wrong", err.message);
     });
-  res.render("studio");
 });
 
 app.get("/hello", function (req, res, next) {
@@ -66,7 +66,7 @@ app.use(function (err, req, res, next) {
 
 // mongoose
 mongoose
-  .connect("mongodb://localhost/exampleApp")
+  .connect("mongodb://localhost/hackathon-practice")
   .then((x) =>
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   )
