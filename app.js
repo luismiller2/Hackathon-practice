@@ -34,6 +34,7 @@ app.get("/studio", function (req, res, next) {
     .then(function (results) {
       console.log("Success!", results);
       res.render("studio", { studio: results });
+
     })
     .catch(function (err) {
       console.log("Something went wrong", err.message);
