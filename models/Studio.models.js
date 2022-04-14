@@ -2,7 +2,7 @@ const { Schema, model } = require("mongoose");
 
 const studioSchema = new Schema(
   {
-
+    name: {
       type: String,
       required: true,
     },
