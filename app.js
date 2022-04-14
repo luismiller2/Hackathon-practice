@@ -58,12 +58,6 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
-let users = [
-  user: 'Nick',
-  name: "Max",
-  phoneNumber: 33333333,
-  email: "nick@mail.com"
-]
 
 // mongoose
 mongoose
