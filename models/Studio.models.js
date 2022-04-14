@@ -2,12 +2,15 @@ const { Schema, model } = require("mongoose");
 
 const studioSchema = new Schema(
   {
-    name: {
+
       type: String,
       required: true,
     },
     address: {
       type: String,
+    },
+    cost: {
+      type: Number,
     },
     phoneNumber: {
       type: String,
@@ -18,9 +21,7 @@ const studioSchema = new Schema(
     availability: {
       type: String,
     },
-    cost: {
-      type: String,
-    },
+
     addOns: {
       type: String,
     },
