@@ -3,10 +3,13 @@ const { Schema, model } = require("mongoose");
 const userSchema = new Schema(
   {
     user: {
-      type: Name,
+      type: String,
       required: true,
     },
+    //stay inside these curly braces
   },
+
+  //stay above this line 
   {
     timeseries: true,
     timestamps: true,

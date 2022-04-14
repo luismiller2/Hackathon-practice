@@ -34,7 +34,7 @@ app.get('/studio', function(req, res, next) {
 });
 
 app.get('/hello', function(req, res, next) {
-  res.render('hello');
+  res.rendgiter('hello');
 });
 
 app.get("/aboutus", function (req, res, next) {
@@ -57,6 +57,13 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render("error");
 });
+
+let users = [
+  user: 'Nick',
+  name: "Max",
+  phoneNumber: 33333333,
+  email: "nick@mail.com"
+]
 
 // mongoose
 mongoose
