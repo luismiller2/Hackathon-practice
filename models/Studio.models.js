@@ -2,7 +2,7 @@ const { Schema, model } = require("mongoose");
 
 const studioSchema = new Schema(
   {
-    studiosName: {
+    name: {
       type: String,
       required: true,
     },
@@ -10,19 +10,19 @@ const studioSchema = new Schema(
       type: String,
     },
     phoneNumber: {
-      type: Number,
+      type: String,
     },
     email: {
       type: String,
     },
     availability: {
-      type: Boolean,
+      type: String,
     },
     cost: {
-      type: Number,
+      type: String,
     },
     addOns: {
-      type: Array,
+      type: String,
     },
   },
   {
