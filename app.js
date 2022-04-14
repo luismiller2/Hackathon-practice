@@ -25,9 +25,12 @@ app.use(express.static(path.join(__dirname, "public")));
 // app.use("/users", usersRouter);
 
 
-/* GET home page. */
 app.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
+});
+
+app.get('/studio', function(req, res, next) {
+  res.render('studio');
 });
 
 app.get('/hello', function(req, res, next) {
