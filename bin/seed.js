@@ -6,15 +6,40 @@ let users = [
     {
     user: 'Nick',
     name: "Nick",
-    phoneNumber: 33333333,
-    email: "nick@mail.com"
+    phoneNumber: 303-333-3333,
+    email: "nick@gmail.com"
     },
     {
     user: 'Luis',
     name: "Luis",
-    phoneNumber: 33333333,
-    email: "luis@mail.com"
-    }
+    phoneNumber: 303-333-3333,
+    email: "luis@gmail.com"
+    },
+    {
+    user: 'Toyota',
+    name: "Miguel",
+    phoneNumber: 505-644-0222,
+    email: "miguel@toyota.com"
+    },
+    {
+    user: 'Wal-Mart',
+    name: "Carlos",
+    phoneNumber:  212-413-8747,
+    email: "carlos@walmart.com"
+    },
+    {
+    user: 'Ricardo',
+    name: "Ricardo",
+    phoneNumber: 213-936-1868,
+    email: "rars@gmail.com"
+    },
+    {
+    user: 'Ironhack',
+    name: "Mike",
+    phoneNumber: 582-282-4633,
+    email: "mike@ironhack.com"
+    },
+
   ]
 
 

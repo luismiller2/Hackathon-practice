@@ -66,7 +66,7 @@ app.use(function (err, req, res, next) {
 
 // mongoose
 mongoose
-  .connect("mongodb://localhost/exampleApp")
+  .connect("mongodb://localhost/hackathon-practice")
   .then((x) =>
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   )
