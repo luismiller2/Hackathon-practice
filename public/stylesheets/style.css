@@ -1,15 +1,32 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: black;
   color: #00B7FF;
 }
 
-.main-heading {
-  font-size: 50px;
+header {
+  /* background-color: rgb(237, 202, 146);  */
+  font-size: 26px;
+}
 
+h1 {
+  font-size: 70px;
+  text-align: center;
+}
+
+a {
+  color: #22b71d;
+}
+
+.main-heading {
+  font-size: 70px;
+}
+
+img {
+    height: 400px;
+    width: 600px;
+    align-content: stretch;
 }
 
 .section-heading {
@@ -28,5 +45,4 @@ a {
 
 li {
   font-size: 24px;
-
 }

@@ -1,14 +1,17 @@
-<h2>Studios In Miami</h2>
+<h1>Studios In Miami</h1>
+
 
 {{#each studio}}
-<ol>
     <li>{{this.name}}</li>
+    <li>{{this.image}}</li>
+<ul>
     <li>{{this.address}}</li>
     <li>{{this.cost}}</li>
     <li>{{this.availability}}</li>
     <li>{{this.phoneNumber}}</li>
     <li>{{this.email}}</li>
     <li>{{this.addOns}}</li>
-</ol>
+ </ul>
 {{/each}}
+
 
