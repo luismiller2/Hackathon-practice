@@ -45,6 +45,7 @@ let users = [
 
 let studio = [
     {
+    image: 'https://www.hgabstudios.com/wp-content/uploads/2019/11/Studio-A-Cyc-Wall-scaled.jpg',
     name: 'HGAB',
     address: '46 NW 36th St Unit 2, Miami, FL 33127',
     cost: '$50-80/hr',
@@ -55,15 +56,7 @@ let studio = [
     },
 
     {
-    name:  'Backhaus',
-    address: '7245 NE 4th Ave, Unit 105-1, Miami, FL 33126',
-    cost: '$100/hr',
-    availability: 'Yes/No',
-    phoneNumber: '(786)-262-0104',
-    email: 'contact@vacostudio.com',
-    addOns: 'Yes/No',
-    },
-    {
+    image: 'https://images.squarespace-cdn.com/content/v1/604677e9bce50f097d8b5a6b/e3c2330e-d96a-4544-ac73-e73d77b11bc7/IMG_1989.jpg?format=1000w',
     name: 'Vault Place',
     address: '540 NW 71st St, Miami, FL 33150',
     cost: '$100-150/hr',
@@ -72,7 +65,9 @@ let studio = [
     email: 'info@vaultplace.com',
     addOns: 'Yes/No',
     },
+
     {
+    image: 'https://img1.wsimg.com/isteam/ip/67681eb1-0240-461…h:520,cg:true,m/cr=w:1400,h:520,ax:50%25,ay:50%25',
     name: 'The Warehouse Miami',
     address: '1747 West Flagler Street, Miami, Florida 33135',
     cost: '$100/hr',
@@ -81,7 +76,9 @@ let studio = [
     email: 'info@thewarehousemia.com',
     addOns: 'Yes/No',
     },
+
     {
+    image: 'https://amperstudios.com/wp-content/uploads/2020/06/FILM-SET_-scaled.jpg',
     name: 'Ampersand Studios',
     address: '31 NE 17th St, Miami, FL 33132',
     cost: '$350-3000/10hrs',
@@ -90,7 +87,9 @@ let studio = [
     email: 'info@amperstudios.com',
     addOns: 'Yes/No',
     },
+
     {
+    image: 'https://images.squarespace-cdn.com/content/v1/6027dd4af0e0ae0e3d2da9f5/1613225514930-ESMX2NI9M3TW62ZXEAKC/Studio-1+white+cyclorama%2C+Production+House%2C+Miami+FL%2C+CFXSTUDIOSMIAMI?format=750w',
     name: 'CFX Studios',
     address: '1075 W 21st Pl, Hialeah, FL 33010',
     cost: '$300/3hrs - $1200/day',
@@ -99,6 +98,17 @@ let studio = [
     email: 'INFO@CFX.MIAMI',
     addOns: 'Yes/No',
     },
+
+    {
+        image: '',
+        name:  'Backhaus',
+        address: '7245 NE 4th Ave, Unit 105-1, Miami, FL 33126',
+        cost: '$100/hr',
+        availability: 'Yes/No',
+        phoneNumber: '(786)-262-0104',
+        email: 'contact@vacostudio.com',
+        addOns: 'Yes/No',
+        },
 ]
 
 

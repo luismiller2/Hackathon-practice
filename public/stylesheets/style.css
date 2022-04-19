@@ -1,13 +1,49 @@
 body {
+  margin: 0;
   padding: 50px;
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: black;
   color: #00B7FF;
 }
 
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* nav {
+  width: 55vw;
+  display: flex;
+  justify-content: space-evenly;
+} */
+
+a {
+  color: #22b71d;
+}
+
 header {
-  /* background-color: rgb(237, 202, 146);  */
-  font-size: 26px;
+  font-size: 22px;
+}
+
+/* #page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 2.5rem;    /* Footer height */
+/* } */
+
+#footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  bottom: 0;
+  width: 20vw;
+  height: 2.5rem;            /*Footer height*/
 }
 
 h1 {
@@ -15,18 +51,16 @@ h1 {
   text-align: center;
 }
 
-a {
-  color: #22b71d;
-}
-
-.main-heading {
+/* .main-heading {
   font-size: 70px;
-}
+} */
 
 img {
-    height: 400px;
-    width: 600px;
-    align-content: stretch;
+  padding-top: 3%;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 3%;
 }
 
 .section-heading {
@@ -44,5 +78,6 @@ img {
 }
 
 li {
-  font-size: 24px;
+  font-size: 10px;
+  font-style: oblique;
 }

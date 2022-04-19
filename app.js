@@ -25,8 +25,8 @@ app.use(express.static(path.join(__dirname, "public")));
 // app.use("/", indexRouter);
 // app.use("/users", usersRouter);
 
-app.get("/", function (req, res, next) {
-  res.render("index", { title: "Express" });
+app.get("/home-page", function (req, res, next) {
+  res.render("home-page", { title: "Express" });
 });
 
 app.get("/studio", function (req, res, next) {
@@ -39,6 +39,25 @@ app.get("/studio", function (req, res, next) {
       console.log("Something went wrong", err.message);
     });
   // res.render("studio");
+});
+
+app.post("/studio", function(req, res, next){
+  Studio.create({
+    name: req.body.name,
+    image: req.body.image,
+    address: req.body.address,
+    cost: req.body.cost,
+    availability: req.body.availability,
+    phoneNumber: req.body.phoneNumber,
+    email: req.body.email,
+    addOns: req.body.addOns
+  })
+  .then(function (createdStudio) {
+    res.json(createdStudio);
+  })
+  .catch(function (error) {
+    res.json(error.message);
+  });
 });
 
 app.get("/hello", function (req, res, next) {
