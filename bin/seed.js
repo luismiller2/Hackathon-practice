@@ -1,11 +1,12 @@
-const mongoose = require('mongoose');
-const Studio = require('../models/Studio.models');
-const User = require('../models/User.models')
+const mongoose = require("mongoose");
+const Studio = require("../models/Studio.models");
+const User = require("../models/User.models");
 
 let users = [
-    {
-    user: 'Nick',
+  {
+    user: "Nick",
     name: "Nick",
+
     phoneNumber: 303-333-3333,
     email: "nick@gmail.com"
     },
@@ -41,6 +42,7 @@ let users = [
     },
 
   ]
+
 
 
 let studio = [
@@ -120,21 +122,20 @@ mongoose
   )
   .catch((err) => console.error("Error connecting to mongo", err));
 
+User.create(users)
+  .then(function (results) {
+    console.log("Users saved", results);
+  })
+  .catch(function (error) {
+    console.log("Something went wrong", error.message);
+    mongoose.connection.close();
+  });
 
-  User.create(users)
-  .then(function(results){
-      console.log("Users saved", results)
+Studio.create(studio)
+  .then(function (results) {
+    console.log("Studio Data", results);
   })
-  .catch(function(error){
-      console.log('Something went wrong', error.message)
-      mongoose.connection.close();
-  })
-
-  Studio.create(studio) 
-  .then(function(results){
-      console.log("Studio Data", results)
-  })
-  .catch(function(error){
-      console.log('Something went wrong', error.message)
-      mongoose.connection.close();
-  })
+  .catch(function (error) {
+    console.log("Something went wrong", error.message);
+    mongoose.connection.close();
+  });
