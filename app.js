@@ -62,11 +62,15 @@ app.post("/studio", function(req, res, next){
 });
 
 app.get("/hello", function (req, res, next) {
-  res.rendgiter("hello");
+  res.render("hello");
 });
 
 app.get("/aboutus", function (req, res, next) {
   res.render("aboutus");
+});
+
+app.get('/map', function(req, res, next) {
+  res.render('map');
 });
 
 // catch 404 and forward to error handler

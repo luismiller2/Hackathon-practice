@@ -102,15 +102,26 @@ let studio = [
     },
 
     {
-        image: '',
-        name:  'Backhaus',
-        address: '7245 NE 4th Ave, Unit 105-1, Miami, FL 33126',
-        cost: '$100/hr',
-        availability: 'Yes/No',
-        phoneNumber: '(786)-262-0104',
-        email: 'contact@vacostudio.com',
-        addOns: 'Yes/No',
-        },
+    image: '',
+    name:  'Backhaus',
+    address: '7245 NE 4th Ave, Unit 105-1, Miami, FL 33126',
+    cost: '$100/hr',
+    availability: 'Yes/No',
+    phoneNumber: '(786)-262-0104',
+    email: 'contact@vacostudio.com',
+    addOns: 'Yes/No',
+    },
+
+    {
+    image: 'https://static.wixstatic.com/media/36b093_d3d0538d4a5448169c92186adc484a5b~mv2.jpg/v1/fill/w_2782,h_1360,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/36b093_d3d0538d4a5448169c92186adc484a5b~mv2.jpg',
+    name:  'Wuul Studios',
+    address: '202 NE 55th Terrace Miami, FL 33137',
+    cost: '$89/hr',
+    availability: 'Yes/No',
+    phoneNumber: '(786) 491-0001',
+    email: 'booking@wuulstudios.com',
+    addOns: 'Yes/No',
+    },
 ]
 
 

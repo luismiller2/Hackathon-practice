@@ -33,6 +33,6 @@ const studioSchema = new Schema(
 );
 
 const Studio = model("Studio", studioSchema);
-// const Studio = model("Studio", studiosSchema);
+
 
 module.exports = Studio;

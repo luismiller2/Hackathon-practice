@@ -29,7 +29,23 @@
           </div> 
         </div>
         <br>
-        
+
+          <h3>Google Maps</h3>
+        <div id="map"></div>
+        <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPOeB7RBKJYCjJtnm7MW5Qlg5gmnUKuws&callback=initMap">
+    </script>
+    <script>
+        function initMap() {
+            var dumbo = {lat: 25.7689882, lng: -80.1911588};
+            var mapOptions = {
+                center: dumbo,
+                zoom: 10
+            };
+            var googlemap = new google.maps.Map(document.getElementById("map"), mapOptions);
+        }
+    </script>
+    
         <hr>
         <br>
     </div>
