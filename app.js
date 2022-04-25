@@ -9,6 +9,7 @@ var usersRouter = require("./routes/users");
 
 const mongoose = require("mongoose");
 const Studio = require("./models/Studio.models");
+const Review = require("./models/Review.models")
 
 var app = express();
 
@@ -25,7 +26,7 @@ app.use(express.static(path.join(__dirname, "public")));
 // app.use("/", indexRouter);
 // app.use("/users", usersRouter);
 
-app.get("/home-page", function (req, res, next) {
+app.get("/", function (req, res, next) {
   res.render("home-page", { title: "Express" });
 });
 
@@ -69,8 +70,31 @@ app.get("/aboutus", function (req, res, next) {
   res.render("aboutus");
 });
 
-app.get('/map', function(req, res, next) {
-  res.render('map');
+app.get("/review", function (req, res, next) {
+  Review.find()
+    .then(function (results) {
+      console.log("Success!", results);
+      res.render("review", { review: results });
+
+    })
+    .catch(function (err) {
+      console.log("Something went wrong", err.message);
+    });
+  // res.render("studio");
+});
+
+app.post("/review", function(req, res, next){
+  Review.create({
+    user: req.body.user,
+    studio: req.body.studio,
+    review: req.body.review,
+  })
+  .then(function (createdReview) {
+    res.json(createdReview);
+  })
+  .catch(function (error) {
+    res.json(error.message);
+  });
 });
 
 // catch 404 and forward to error handler

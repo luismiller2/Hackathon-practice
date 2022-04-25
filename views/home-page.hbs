@@ -1,36 +1,10 @@
 <html>
 <body>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='stylesheets/style.css' />
-  </head>
-<body> 
-    <header>
-      <div class="navbar">
-       <nav>
-        <a href="/home-page">Home</a>
-        <a href="/studio">Studios</a>
-        <a href="/aboutus">About Us</a>
-        </nav>
-      </div>
-    </header> 
-
+ <header>
       <div class="Title">
-        <h1>Studio-Hub</h1>
+        <h1>Miami Studio-Hub</h1>
       </div>
-    
-        <div id="page-container">
-         <div id="content-wrap">
-           <div class="image">
-            <img src="\images\banner.webp" alt="Temporary Banner"/>
-          </div> 
-        </div>
-        <br>
-
-          <h3>Google Maps</h3>
+ </header>
         <div id="map"></div>
         <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAPOeB7RBKJYCjJtnm7MW5Qlg5gmnUKuws&callback=initMap">
@@ -45,14 +19,24 @@
             var googlemap = new google.maps.Map(document.getElementById("map"), mapOptions);
         }
     </script>
-    
         <hr>
         <br>
     </div>
-    {{{body}}}
-    <footer id="footer">
-        <a href="/studio"><h4>Find a studio</h4></a>
-        <a href="/aboutus"><h4>About Us<h4></a>
-    </footer>
-</body> 
+    {{{body}}} 
+
+ <div id="page-container">
+   <div id="content-wrap">
+   </div>
+
+   <footer id="footer">
+    <a href="/studio"><h4>Find a studio</h4></a>
+    <a href="/aboutus"><h4>About Us<h4></a>
+   </footer>
+ </div>
+</body>
+
 </html>
+
+
+
+

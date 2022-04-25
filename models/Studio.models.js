@@ -6,6 +6,9 @@ const studioSchema = new Schema(
       type: String,
       required: true,
     },
+    image: {
+      type: String,
+    },
     address: {
       type: String,
     },
@@ -21,7 +24,6 @@ const studioSchema = new Schema(
     availability: {
       type: String,
     },
-
     addOns: {
       type: String,
     },

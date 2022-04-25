@@ -1,0 +1,13 @@
+<head>
+    <h1>Studio Reviews</h1>
+
+        {{#each studio}}
+            <h3>{{this.name}}</h3>
+            <img src="{{this.image}}" alt="studio pic">
+        <ul>
+            <li>{{this.user}}</li>
+            <li>{{this.studio}}</li>
+            <li>{{this.review}}</li>
+        </ul>
+        {{/each}}
+</head>

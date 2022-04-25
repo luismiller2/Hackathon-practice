@@ -1,23 +1,18 @@
 const { Schema, model } = require("mongoose");
 
-const userSchema = new Schema(
-// const studiosSchema = new Schema(
+const reviewSchema = new Schema(
   {
     user: {
       type: String,
       required: true,
     },
 
-    name: {
+    studio: {
       type: String,
     },
-    phoneNumber: {
+    review: {
       type: String,
     },
-    email: {
-      type: String,
-    }
-
   },
   
   {
@@ -27,6 +22,6 @@ const userSchema = new Schema(
 
 );
 
-const User = model("User", userSchema);
+const Review = model("Review", reviewSchema);
 
-module.exports = User;
+module.exports = Review;

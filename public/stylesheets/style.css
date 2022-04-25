@@ -13,28 +13,15 @@ body {
   align-items: center;
 }
 
-/* nav {
-  width: 55vw;
-  display: flex;
-  justify-content: space-evenly;
-} */
-
 a {
   color: #22b71d;
 }
 
 header {
   font-size: 22px;
+  display: flex;
+  flex-direction: column;
 }
-
-/* #page-container {
-  position: relative;
-  min-height: 100vh;
-}
-
-#content-wrap {
-  padding-bottom: 2.5rem;    /* Footer height */
-/* } */
 
 #footer {
   display: flex;
@@ -43,7 +30,7 @@ header {
   align-items: flex-start;
   bottom: 0;
   width: 20vw;
-  height: 2.5rem;            /*Footer height*/
+  height: 2.5rem;            
 }
 
 h1 {
@@ -51,12 +38,8 @@ h1 {
   text-align: center;
 }
 
-/* .main-heading {
-  font-size: 70px;
-} */
-
 img {
-  width: 1300px;
+  width: 100%;
   height: 600px;
 }
 
@@ -71,10 +54,16 @@ img {
   font-size: 50px;
   color:whitesmoke;
   font-weight: 200;
-
 }
 
 li {
-  font-size: 10px;
-  font-style: oblique;
+  font-size: 14px;
+  font-style: none;
+}
+
+
+#map {
+  width: 100%;
+  height: 500px;
+  background-color: black;
 }
