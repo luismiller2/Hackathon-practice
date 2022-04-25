@@ -12,6 +12,12 @@ const studioSchema = new Schema(
     address: {
       type: String,
     },
+    latitude: {
+      type: String,
+    },
+    longitude: {
+      type: String,
+    },
     cost: {
       type: String,
     },

@@ -1,11 +1,13 @@
 <head>
     <h1>Studios In Miami</h1>
-
+    <hr>
         {{#each studio}}
             <h3>{{this.name}}</h3>
             <img src="{{this.image}}" alt="studio pic">
         <ul>
             <li>{{this.address}}</li>
+            <li>{{this.latitude}}</li>
+            <li>{{this.longitude}}</li>
             <li>{{this.cost}}</li>
             <li>{{this.availability}}</li>
             <li>{{this.phoneNumber}}</li>
