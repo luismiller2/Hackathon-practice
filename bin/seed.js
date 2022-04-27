@@ -1,32 +1,5 @@
 const mongoose = require("mongoose");
 const Studio = require("../models/Studio.models");
-const User = require("../models/User.models");
-const Review = require("../models/Review.models")
-
-let users = [
-    {
-    name: 'Luis',
-    email: "luis@gmail.com",
-    password: 'password',
-    timeslot: "Morning",
-    phoneNumber: 305-333-3333,
-    },
-    {
-    name: 'Diego',
-    email: "diego@gmail.com",
-    password: 'password',
-    timeslot: "Afternoon",
-    phoneNumber: 505-644-0222,
-    },
-    {
-    name: 'Ironhack',
-    email: "mike@ironhack.com",
-    password: 'password',
-    timeslot: "Night",
-    phoneNumber: 582-282-4633,
-    },
-
-  ]
 
 let studio = [
     {
@@ -156,14 +129,6 @@ let studio = [
     },
 ]
 
-let review = [
-  {
-    user: 'Luis',
-    studio: 'HGAB Studios',
-    review: 'I had a wonderful shoot. The staff was very accomadating.',
-  }
-]
-
 
 
 mongoose
@@ -172,15 +137,6 @@ mongoose
     console.log(`SEED "${x.connections[0].name}"`)
   )
   .catch((err) => console.error("Error connecting to mongo", err));
-
-User.create(users)
-  .then(function (results) {
-    console.log("Users saved", results);
-  })
-  .catch(function (error) {
-    console.log("Something went wrong", error.message);
-    mongoose.connection.close();
-  });
 
 Studio.create(studio)
   .then(function (results) {
@@ -191,11 +147,3 @@ Studio.create(studio)
     mongoose.connection.close();
   });
 
-Review.create(review)
-  .then(function (results) {
-    console.log("Review Data", results);
-  })
-  .catch(function (error) {
-    console.log("Something went wrong", error.message);
-    mongoose.connection.close();
-  });

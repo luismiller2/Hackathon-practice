@@ -1,20 +1,21 @@
 <head>
     <h1>Studios In Miami</h1>
     <hr>
+    <div class="grid">
         {{#each studio}}
+        <div>
             <h3>{{this.name}}</h3>
             <img src="{{this.image}}" alt="studio pic">
         <ul>
             <li>{{this.address}}</li>
-            <li>{{this.latitude}}</li>
-            <li>{{this.longitude}}</li>
             <li>{{this.cost}}</li>
-            <li>{{this.availability}}</li>
             <li>{{this.phoneNumber}}</li>
             <li>{{this.email}}</li>
-            <li>{{this.addOns}}</li>
+            <li>{{this.schedule}}</li>
         </ul>
         <a href="/studio/review/{{this._id}}">Leave a Review</a>
+        </div>
         {{/each}}
+    </div>
 </head>
 

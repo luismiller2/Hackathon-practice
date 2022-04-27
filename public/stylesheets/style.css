@@ -13,6 +13,11 @@ body {
   align-items: center;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+}
+
 a {
   color: #22b71d;
 }
@@ -36,6 +41,10 @@ header {
 h1 {
   font-size: 70px;
   text-align: center;
+}
+
+h3 {
+  color:rgb(224, 140, 3)
 }
 
 img {

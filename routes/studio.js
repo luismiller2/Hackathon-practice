@@ -60,14 +60,12 @@ router.get("/", function (req, res, next) {
   //This route returns all of the reviews for a specific studio
  
 router.get("/all-reviews", (req, res) => {
-  Review.find()
+  Studio.find()
     .populate({
-      review: req.body.review,
-      studio: req.params.studioId,
-      user: req.session.user._id,
+      path: "reviews",
     })
-    .then((allReviews) => {
-      res.render("all-reviews", { allReviews: allReviews });
+    .then((allStudios) => {
+      res.render("all-reviews", { allStudios: allStudios });
     })
     .catch((err) => {
       console.log("Failed", err.message);
