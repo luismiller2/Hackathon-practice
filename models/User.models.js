@@ -1,23 +1,24 @@
 const { Schema, model } = require("mongoose");
 
 const userSchema = new Schema(
-// const studiosSchema = new Schema(
+
   {
-    user: {
+    name: {
       type: String,
       required: true,
     },
-
-    name: {
+    email: {
       type: String,
+    },
+    password: {
+      type: String,
+    },
+    timeslot: {
+      type: Object,
     },
     phoneNumber: {
       type: String,
-    },
-    email: {
-      type: String,
     }
-
   },
   
   {

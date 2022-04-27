@@ -1,27 +1,10 @@
 const { Schema, model } = require("mongoose");
 
-const reviewSchema = new Schema(
-  {
-    user: {
-      type: String,
-      required: true,
-    },
+const reviewSchema = new Schema({
+    user: { type: Schema.Types.ObjectId, ref: "User" },
+    comment: { type: String, maxlength: 500 }
+  });
 
-    studio: {
-      type: String,
-    },
-    review: {
-      type: String,
-    },
-  },
-  
-  {
-    timeseries: true,
-    timestamps: true,
-  }
-
-);
-
-const Review = model("Review", reviewSchema);
+  const Review = model("Review", reviewSchema);
 
 module.exports = Review;

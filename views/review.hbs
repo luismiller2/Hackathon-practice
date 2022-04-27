@@ -1,13 +1,11 @@
-<head>
-    <h1>Studio Reviews</h1>
-<hr>
-        {{#each studio}}
-            <h3>{{this.name}}</h3>
-            <img src="{{this.image}}" alt="studio pic">
-        <ul>
-            <li>{{this.user}}</li>
-            <li>{{this.studio}}</li>
-            <li>{{this.review}}</li>
-        </ul>
-        {{/each}}
-</head>
+<h2>Create a Review</h2>
+
+<form method="post" action="/review/{{review._id}}">
+
+  <label>Comment</label>
+  <textarea name="name" ></textarea>
+
+  <button type="submit">Post Review</button>
+</form>
+
+<p>{{message}}</p>

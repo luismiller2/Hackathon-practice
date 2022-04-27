@@ -6,12 +6,14 @@ var logger = require("morgan");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+var studioRouter = require("./routes/studio");
 
 const mongoose = require("mongoose");
 const Studio = require("./models/Studio.models");
 const Review = require("./models/Review.models")
 
 var app = express();
+require ('./config/session.config') (app)
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -23,55 +25,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-// app.use("/", indexRouter);
-// app.use("/users", usersRouter);
-
-app.get("/", function (req, res, next) {
-  res.render("home-page", { title: "Express" });
-});
-
-app.get("/studio", function (req, res, next) {
-  Studio.find()
-    .then(function (results) {
-      console.log("Success!", results);
-      res.render("studio", { studio: results });
-
-    })
-    .catch(function (err) {
-      console.log("Something went wrong", err.message);
-    });
-  // res.render("studio");
-});
-
-app.post("/studio", function(req, res, next){
-  Studio.create({
-    name: req.body.name,
-    image: req.body.image,
-    address: req.body.address,
-    cost: req.body.cost,
-    availability: req.body.availability,
-    phoneNumber: req.body.phoneNumber,
-    email: req.body.email,
-    addOns: req.body.addOns
-  })
-  .then(function (createdStudio) {
-    res.json(createdStudio);
-  })
-  .catch(function (error) {
-    res.json(error.message);
-  });
-});
-
-app.get("/hello", function (req, res, next) {
-  res.render("hello");
-});
+app.use("/", indexRouter);
+app.use("/users", usersRouter);
+app.use("/studio", studioRouter);
 
 app.get("/aboutus", function (req, res, next) {
   res.render("aboutus");
 });
 
-app.get("/review", function (req, res, next) {
-  Review.find()
+app.get("/review/:id", function (req, res, next) {
+  Studio.findById(req.params.id)
     .then(function (results) {
       console.log("Success!", results);
       res.render("review", { review: results });
@@ -83,14 +46,24 @@ app.get("/review", function (req, res, next) {
   // res.render("studio");
 });
 
-app.post("/review", function(req, res, next){
-  Review.create({
+app.post("/review/:studioId", function(req, res, next){
+  Studio.create({
     user: req.body.user,
     studio: req.body.studio,
     review: req.body.review,
   })
   .then(function (createdReview) {
-    res.json(createdReview);
+
+
+    Review.findByIdAndUpdate(req.params.studioId, {
+      $addToSet: {reviews: createdReview._id}
+    })
+      .then(function(){
+        res.redirect("/review")
+      }) .catch(function(err){
+        console.log(err.message)
+      })
+
   })
   .catch(function (error) {
     res.json(error.message);

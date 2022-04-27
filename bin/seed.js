@@ -4,42 +4,26 @@ const User = require("../models/User.models");
 const Review = require("../models/Review.models")
 
 let users = [
-  {
-    user: "Nick",
-    name: "Nick",
-
-    phoneNumber: 303-333-3333,
-    email: "nick@gmail.com"
+    {
+    name: 'Luis',
+    email: "luis@gmail.com",
+    password: 'password',
+    timeslot: "Morning",
+    phoneNumber: 305-333-3333,
     },
     {
-    user: 'Luis',
-    name: "Luis",
-    phoneNumber: 303-333-3333,
-    email: "luis@gmail.com"
-    },
-    {
-    user: 'Toyota',
-    name: "Miguel",
+    name: 'Diego',
+    email: "diego@gmail.com",
+    password: 'password',
+    timeslot: "Afternoon",
     phoneNumber: 505-644-0222,
-    email: "miguel@toyota.com"
     },
     {
-    user: 'Wal-Mart',
-    name: "Carlos",
-    phoneNumber:  212-413-8747,
-    email: "carlos@walmart.com"
-    },
-    {
-    user: 'Ricardo',
-    name: "Ricardo",
-    phoneNumber: 213-936-1868,
-    email: "rars@gmail.com"
-    },
-    {
-    user: 'Ironhack',
-    name: "Mike",
+    name: 'Ironhack',
+    email: "mike@ironhack.com",
+    password: 'password',
+    timeslot: "Night",
     phoneNumber: 582-282-4633,
-    email: "mike@ironhack.com"
     },
 
   ]
@@ -53,6 +37,11 @@ let studio = [
     longitude: '-80.19645',
     cost: '$50-80/hr',
     availability: 'Yes/No',
+    schedule: {
+      'Morning' : ["8-10am", "10-12pm"],
+      'Afternoon': ["12-2pm", "2-4pm"],
+      'Night' : ["4-6pm", "6-8pm"],
+    },
     phoneNumber: '(305) 200-3056',
     email: 'info@hgabstudios.com',
     addOns: 'Yes/No',
@@ -66,6 +55,11 @@ let studio = [
     longitude: '-80.20557',
     cost: '$100-150/hr',
     availability: 'Yes/No',
+    schedule: {
+      'Morning' : ["8-10am", "10-12pm"],
+      'Afternoon': ["12-2pm", "2-4pm"],
+      'Night' : ["4-6pm", "6-8pm"],
+    },
     phoneNumber: 'N/A',
     email: 'info@vaultplace.com',
     addOns: 'Yes/No',
@@ -79,6 +73,11 @@ let studio = [
     longitude: '-80.22371',
     cost: '$100/hr',
     availability: 'Yes/No',
+    schedule: {
+      'Morning' : ["8-10am", "10-12pm"],
+      'Afternoon': ["12-2pm", "2-4pm"],
+      'Night' : ["4-6pm", "6-8pm"],
+    },
     phoneNumber: 'N/A',
     email: 'info@thewarehousemia.com',
     addOns: 'Yes/No',
@@ -92,6 +91,11 @@ let studio = [
     longitude: '-80.19418',
     cost: '$350-3000/10hrs',
     availability: 'Yes/No',
+    schedule: {
+      'Morning' : ["8-10am", "10-12pm"],
+      'Afternoon': ["12-2pm", "2-4pm"],
+      'Night' : ["4-6pm", "6-8pm"],
+    },
     phoneNumber: '(786) 769-0055',
     email: 'info@amperstudios.com',
     addOns: 'Yes/No',
@@ -105,6 +109,11 @@ let studio = [
     longitude: '-80.30368',
     cost: '$300/3hrs - $1200/day',
     availability: 'Yes/No',
+    schedule: {
+      'Morning' : ["8-10am", "10-12pm"],
+      'Afternoon': ["12-2pm", "2-4pm"],
+      'Night' : ["4-6pm", "6-8pm"],
+    },
     phoneNumber: '(877) 576-4239',
     email: 'INFO@CFX.MIAMI',
     addOns: 'Yes/No',
@@ -118,6 +127,11 @@ let studio = [
     longitude: '-80.1891',
     cost: '$100/hr',
     availability: 'Yes/No',
+    schedule: {
+      'Morning' : ["8-10am", "10-12pm"],
+      'Afternoon': ["12-2pm", "2-4pm"],
+      'Night' : ["4-6pm", "6-8pm"],
+    },
     phoneNumber: '(786)-262-0104',
     email: 'contact@vacostudio.com',
     addOns: 'Yes/No',
@@ -131,19 +145,24 @@ let studio = [
     longitude: '-80.19172',
     cost: '$89/hr',
     availability: 'Yes/No',
+    schedule: {
+      'Morning' : ["8-10am", "10-12pm"],
+      'Afternoon': ["12-2pm", "2-4pm"],
+      'Night' : ["4-6pm", "6-8pm"],
+    },
     phoneNumber: '(786) 491-0001',
     email: 'booking@wuulstudios.com',
     addOns: 'Yes/No',
     },
 ]
 
-// let review = [
-//   {
-//     user: 'Luis',
-//     studio: 'HGAB Studios',
-//     review: 'I had a wonderful shoot. The staff was very accomadating.',
-//   }
-// ]
+let review = [
+  {
+    user: 'Luis',
+    studio: 'HGAB Studios',
+    review: 'I had a wonderful shoot. The staff was very accomadating.',
+  }
+]
 
 
 
@@ -166,6 +185,15 @@ User.create(users)
 Studio.create(studio)
   .then(function (results) {
     console.log("Studio Data", results);
+  })
+  .catch(function (error) {
+    console.log("Something went wrong", error.message);
+    mongoose.connection.close();
+  });
+
+Review.create(review)
+  .then(function (results) {
+    console.log("Review Data", results);
   })
   .catch(function (error) {
     console.log("Something went wrong", error.message);
