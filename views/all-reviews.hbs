@@ -1,0 +1,12 @@
+<h2>All Reviews</h2>
+{{message}}
+{{#each allReviews}}
+  <p>{{this.name}}</p>
+  <p>{{this.image}}</p>
+  <h4>Reviews:</h4>
+  {{#each this.reviews}}
+    <h5>{{this.review}}</h5>
+    <p>-{{user}}</p>
+  {{/each}}
+  <a href="/studio/{{this._id}}/add-review">add a Review</a>
+{{/each}}

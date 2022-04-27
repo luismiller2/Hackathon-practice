@@ -33,43 +33,6 @@ app.get("/aboutus", function (req, res, next) {
   res.render("aboutus");
 });
 
-app.get("/review/:id", function (req, res, next) {
-  Studio.findById(req.params.id)
-    .then(function (results) {
-      console.log("Success!", results);
-      res.render("review", { review: results });
-
-    })
-    .catch(function (err) {
-      console.log("Something went wrong", err.message);
-    });
-  // res.render("studio");
-});
-
-app.post("/review/:studioId", function(req, res, next){
-  Studio.create({
-    user: req.body.user,
-    studio: req.body.studio,
-    review: req.body.review,
-  })
-  .then(function (createdReview) {
-
-
-    Review.findByIdAndUpdate(req.params.studioId, {
-      $addToSet: {reviews: createdReview._id}
-    })
-      .then(function(){
-        res.redirect("/review")
-      }) .catch(function(err){
-        console.log(err.message)
-      })
-
-  })
-  .catch(function (error) {
-    res.json(error.message);
-  });
-});
-
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
