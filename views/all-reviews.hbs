@@ -1,7 +1,9 @@
 <h3>All Reviews</h3>
-{{#each allStudios}}
-<p>{{this.name}}</p>
-{{#each this.reviews}}
-<li>{{this.review}}</li>
-{{/each }}
-{{/each}}
+
+    {{#each allStudios}}
+    <p>{{this.name}}</p>
+
+    {{#each this.reviews}}
+    <li>{{this.review}}</li>
+    {{/each }}
+    {{/each}}

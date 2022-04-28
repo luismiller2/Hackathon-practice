@@ -1,21 +1,32 @@
-<head>
-    <h1>Studios In Miami</h1>
-    <hr>
-    <div class="grid">
-        {{#each studio}}
+<html>
+<body>
+
+    <head>
+        <h1>Studios In Miami</h1>
+<hr>
+        <div class="grid">
+            {{#each studio}}
         <div>
+            {{!-- <h3><a href="{{this.name}}">{{this.name}}</a></h3> --}}
             <h3>{{this.name}}</h3>
             <img src="{{this.image}}" alt="studio pic">
-        <ul>
+            <ul>
+                {{#each schedule}}
+                    {{this}}
+                
+                {{/each}}
             <li>{{this.address}}</li>
             <li>{{this.cost}}</li>
             <li>{{this.phoneNumber}}</li>
             <li>{{this.email}}</li>
-            <li>{{this.schedule}}</li>
-        </ul>
-        <a href="/studio/review/{{this._id}}">Leave a Review</a>
+            </ul>
+            <a href="/studio/review/{{this._id}}">Leave a Review</a>
         </div>
-        {{/each}}
-    </div>
-</head>
-
+            {{/each}}
+        </div>
+    </head>
+    
+<a href="/"><h4>Back Home</h4></a>
+    
+</body>
+</html>
