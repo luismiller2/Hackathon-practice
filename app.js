@@ -14,6 +14,7 @@ const Review = require("./models/Review.models")
 
 var app = express();
 require ('./config/session.config') (app)
+require('dotenv/config')
 
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
@@ -51,7 +52,7 @@ app.use(function (err, req, res, next) {
 
 // mongoose
 mongoose
-  .connect("mongodb://localhost/hackathon-practice")
+  .connect( process.env.MONGODB_URI || "mongodb://localhost/hackathon-practice")
   .then((x) =>
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   )

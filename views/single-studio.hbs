@@ -1,0 +1,19 @@
+ <html>
+   <body>
+     <h1>{{studio.name}}</h1>
+     <hr>
+     <img src="{{studio.image}}" alt="studio pic">
+      <ul>
+             {{#each studio.schedule}}
+            <li>{{@key}}
+                <button>{{this}}</button>
+            </li>
+                {{/each}}
+            <li>{{studio.address}}</li>
+            <li>{{studio.cost}}</li>
+            <li>{{studio.phoneNumber}}</li>
+            <li>{{studio.email}}</li>
+      </ul>
+            <a href="/studio/review/{{this._id}}">Leave a Review</a>
+   </body>
+ </html>

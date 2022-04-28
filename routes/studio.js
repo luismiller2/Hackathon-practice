@@ -73,4 +73,18 @@ router.get("/all-reviews", (req, res) => {
     });
 });
 
+// This route makes studios their own pages
+router.get("/views/:id", (req, res, next) => {
+  Studio.findById(req.params.id)
+  .then(function (results) {
+    console.log("Success!", results);
+    res.render("single-studio", { studio: results });
+
+  })
+  .catch(function (err) {
+    console.log("Something went wrong", err.message);
+  });
+// res.render("studio");
+});
+
 module.exports = router;

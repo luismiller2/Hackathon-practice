@@ -32,7 +32,7 @@ router.post("/signup", function (req, res, next) {
       })
         .then((newlyCreatedUser) => {
           //We could create a session cookie right here
-          //req.session.user = newlyCreatedUser
+          req.session.user = newlyCreatedUser
           res.render("home-page", {
             message: `Welcome, ${newlyCreatedUser.name}!`,
           });
