@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const Studio = require("../models/Studio.models");
+require('dotenv/config')
 
 let studio = [
     {
@@ -105,7 +106,7 @@ let studio = [
 
 
 mongoose
-  .connect("mongodb://localhost/hackathon-practice")
+  .connect( process.env.MONGODB_URI || "mongodb://localhost/hackathon-practice")
   .then((x) =>
     console.log(`SEED "${x.connections[0].name}"`)
   )
