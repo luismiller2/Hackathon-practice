@@ -12,6 +12,16 @@ body {
   justify-content: space-between;
   align-items: center;
 }
+/* .rightnav {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  /* align-items: center;
+} */ 
+
+.weatherbar {
+  justify-content: space-between;
+}
 
 .grid {
   display: grid;

@@ -11,9 +11,9 @@ let studio = [
     phoneNumber: '(305) 200-3056',
     email: 'info@hgabstudios.com',
     schedule: {
-      'Morning' : ["8-10am", "10-12pm"],
-      'Afternoon': ["12-2pm", "2-4pm"],
-      'Night' : ["4-6pm", "6-8pm"],
+      'Morning' : ["8am - 12pm"],
+      'Afternoon': ["12pm - 4pm"],
+      'Night' : ["4pm - 8pm"],
     },
     },
 
@@ -25,9 +25,9 @@ let studio = [
     phoneNumber: 'N/A',
     email: 'info@vaultplace.com',
     schedule: {
-      'Morning' : ["8-10am", "10-12pm"],
-      'Afternoon': ["12-2pm", "2-4pm"],
-      'Night' : ["4-6pm", "6-8pm"],
+      'Morning' : ["8am - 12pm"],
+      'Afternoon': ["12pm - 4pm"],
+      'Night' : ["4pm - 8pm"],
     },
     },
 
@@ -39,9 +39,9 @@ let studio = [
       phoneNumber: '(786) 491-0001',
       email: 'booking@wuulstudios.com',
       schedule: {
-        'Morning' : ["8-10am", "10-12pm"],
-        'Afternoon': ["12-2pm", "2-4pm"],
-        'Night' : ["4-6pm", "6-8pm"],
+        'Morning' : ["8am - 12pm"],
+        'Afternoon': ["12pm - 4pm"],
+        'Night' : ["4pm - 8pm"],
       },
       },
 
@@ -53,9 +53,9 @@ let studio = [
     phoneNumber: '(786) 769-0055',
     email: 'info@amperstudios.com',
     schedule: {
-      'Morning' : ["8-10am", "10-12pm"],
-      'Afternoon': ["12-2pm", "2-4pm"],
-      'Night' : ["4-6pm", "6-8pm"],
+      'Morning' : ["8am - 12pm"],
+      'Afternoon': ["12pm - 4pm"],
+      'Night' : ["4pm - 8pm"],
     },
     },
 
@@ -67,9 +67,9 @@ let studio = [
     phoneNumber: '(877) 576-4239',
     email: 'INFO@CFX.MIAMI',
     schedule: {
-      'Morning' : ["8-10am", "10-12pm"],
-      'Afternoon': ["12-2pm", "2-4pm"],
-      'Night' : ["4-6pm", "6-8pm"],
+      'Morning' : ["8am - 12pm"],
+      'Afternoon': ["12pm - 4pm"],
+      'Night' : ["4pm - 8pm"],
     },
     },
 
@@ -81,9 +81,9 @@ let studio = [
     phoneNumber: '(786)-262-0104',
     email: 'contact@vacostudio.com',
     schedule: {
-      'Morning' : ["8-10am", "10-12pm"],
-      'Afternoon': ["12-2pm", "2-4pm"],
-      'Night' : ["4-6pm", "6-8pm"],
+      'Morning' : ["8am - 12pm"],
+      'Afternoon': ["12pm - 4pm"],
+      'Night' : ["4pm - 8pm"],
     },
     },
 
@@ -95,9 +95,9 @@ let studio = [
       phoneNumber: 'N/A',
       email: 'info@thewarehousemia.com',
       schedule: {
-        'Morning' : ["8-10am", "10-12pm"],
-        'Afternoon': ["12-2pm", "2-4pm"],
-        'Night' : ["4-6pm", "6-8pm"],
+        'Morning' : ["8am - 12pm"],
+        'Afternoon': ["12pm - 4pm"],
+        'Night' : ["4pm - 8pm"],
       },
       },
 

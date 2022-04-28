@@ -1,9 +1,12 @@
-<h3>All Reviews</h3>
+<h1>All Reviews</h1>
 
+{{!-- <div class="grid"> --}}
     {{#each allStudios}}
-    <p>{{this.name}}</p>
+    <h3>{{this.name}}</h3>
 
     {{#each this.reviews}}
     <li>{{this.review}}</li>
     {{/each }}
+
     {{/each}}
+{{!-- </div> --}}

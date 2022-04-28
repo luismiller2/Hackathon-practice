@@ -43,8 +43,8 @@ router.get("/", function (req, res, next) {
       Studio.findByIdAndUpdate(req.params.studioId, {
         $addToSet: {reviews: createdReview._id}
       })
-        .then(function(foundStudio){
-          res.render("studio-review", {createdReview: createdReview, foundStudio: foundStudio, user: req.session.user.name})
+        .then(function(){
+          res.redirect("/studio/all-reviews")
         }) .catch(function(err){
           console.log(err.message)
         })
@@ -80,6 +80,19 @@ router.get("/views/:id", (req, res, next) => {
     console.log("Success!", results);
     res.render("single-studio", { studio: results });
 
+  })
+  .catch(function (err) {
+    console.log("Something went wrong", err.message);
+  });
+// res.render("studio");
+});
+
+router.post("/views/book-time/:id/:time", (req, res, next) =>{
+  console.log("Time?", req.params.time)
+  Studio.findById(req.params.id)
+  .then(function(results) {
+    console.log("Success!", results);
+    res.render("book-time", {studio: results, time: req.params.time});
   })
   .catch(function (err) {
     console.log("Something went wrong", err.message);

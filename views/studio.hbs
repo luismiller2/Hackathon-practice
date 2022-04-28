@@ -11,12 +11,12 @@
             <img src="{{this.image}}" alt="studio pic">
             <ul>
                 {{#each schedule}}
-            <form method="post" action="/studio/views/book-time/{{studio._id}}"></form>
+            <form method="post" action="/studio/views/book-time/{{../this._id}}/{{this}}">
             <li>{{@key}}
             <button type="submit">{{this}}</button>
             </li>
-                {{/each}}
             </form>
+                {{/each}}
             <li>{{this.address}}</li>
             <li>{{this.cost}}</li>
             <li>{{this.phoneNumber}}</li>

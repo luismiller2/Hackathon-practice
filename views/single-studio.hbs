@@ -4,16 +4,18 @@
      <hr>
      <img src="{{studio.image}}" alt="studio pic">
       <ul>
-             {{#each studio.schedule}}
+            {{#each studio.schedule}}
+            <form method="post" action="/studio/views/book-time/{{../studio._id}}/{{this}}">
             <li>{{@key}}
-                <button>{{this}}</button>
+            <button type="submit">{{this}}</button>
             </li>
+            </form>
                 {{/each}}
             <li>{{studio.address}}</li>
             <li>{{studio.cost}}</li>
             <li>{{studio.phoneNumber}}</li>
             <li>{{studio.email}}</li>
       </ul>
-            <a href="/studio/review/{{this._id}}">Leave a Review</a>
+         <a href="/studio/review/{{studio._id}}">Leave a Review</a>
    </body>
  </html>
