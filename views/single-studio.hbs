@@ -10,12 +10,16 @@
             <button type="submit">{{this}}</button>
             </li>
             </form>
-                {{/each}}
+            {{/each}}
             <li>{{studio.address}}</li>
             <li>{{studio.cost}}</li>
             <li>{{studio.phoneNumber}}</li>
             <li>{{studio.email}}</li>
+            <li><a href="/studio/review/{{studio._id}}">Leave a Review</a></li>
       </ul>
-         <a href="/studio/review/{{studio._id}}">Leave a Review</a>
+         <br>
+        <hr>
+    
+          <a href="/studio"><h4>Back to Studios</h4></a>
    </body>
  </html>

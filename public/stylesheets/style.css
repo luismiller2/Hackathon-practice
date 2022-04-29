@@ -11,13 +11,14 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+
 }
-/* .rightnav {
+
+.rightnav {
+  justify-content: space-between;
   display: flex;
-  flex-direction: row;
-  /* justify-content: space-between; */
-  /* align-items: center;
-} */ 
+}
+
 
 .weatherbar {
   justify-content: space-between;
@@ -25,11 +26,13 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 400px 400px 400px;
+  grid-template-columns: 385px 385px 385px;
+  grid-gap: 10px;
 }
 
 a {
   color: #22b71d;
+  font-size: 16px;
 }
 
 header {
@@ -83,6 +86,9 @@ img {
 li {
   font-size: 14px;
   font-style: none;
+  list-style-type: square;
+  
+  
 }
 
 

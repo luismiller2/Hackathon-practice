@@ -55,6 +55,29 @@ router.get("/", function (req, res, next) {
     });
   });
   
+  // router.get("/review/:studioId/edit", (req, res, next) => {
+  //   Review.findById(req.params.id).then(function (review) {
+  //     console.log(review);
+  //     res.render("update-review", { review: review });
+  //   });
+  // })
+
+  // router.post('/review/:studioId/edit', (req, res, next) => {
+  //   let newObj = {};
+  //   Object.keys(req.body).forEach(function (prop){
+  //     if (req.body[prop]) {
+  //       newObj[prop] = req.body[prop];
+  //     }
+  //   });
+  //   Review.findByIdAndUpdate(req.params.id, {...newObj})
+  //   .then(function(results){
+  //     console.log("Success", results);
+  //     res.redirect("all-reviews")
+  //   })
+  //   .catch(function(error){
+  //     console.log("Failed", error.message)
+  //   })
+  // });
 
 
   //This route returns all of the reviews for a specific studio
