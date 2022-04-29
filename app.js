@@ -11,6 +11,7 @@ var studioRouter = require("./routes/studio");
 const mongoose = require("mongoose");
 const Studio = require("./models/Studio.models");
 const Review = require("./models/Review.models")
+const Bookings = require("./models/Bookings.models")
 
 var app = express();
 require ('./config/session.config') (app)
