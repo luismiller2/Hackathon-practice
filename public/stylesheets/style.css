@@ -18,8 +18,8 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 385px 385px 385px;
-  row-gap: 100px;
   grid-gap: 10px;
+  row-gap: 100px;
 }
 
 a {
