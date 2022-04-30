@@ -17,7 +17,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 440px 440px 440px;
+  grid-template-columns: 450px 450px 450px;
   grid-gap: 10px;
   row-gap: 100px;
   align-items: center;
