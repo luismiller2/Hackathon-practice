@@ -7,8 +7,10 @@
         <div class="grid">
             {{#each studio}}
         <div>
-            <a href="/studio/views/{{this._id}}"><h3>{{this.name}}</h3></a>
-            <img src="{{this.image}}" alt="studio pic">
+            <div class="images">
+            <a href="/studio/views/{{this._id}}"><h3>{{this.name}}</h3>
+            <img src="{{this.image}}" alt="studio pic"></a>
+            </div>
             <ul>
                 {{#each schedule}}
             <form method="post" action="/studio/views/book-time/{{../this._id}}/{{this}}">
