@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 50px;
-  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 20px "Judson";
   background-color: rgb(0, 0, 0);
   color: #00B7FF;
 }
@@ -55,6 +55,7 @@ header {
 }
 
 h1 {
+  font: "Quando";
   font-size: 70px;
   text-align: center;
 }
