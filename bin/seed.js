@@ -100,9 +100,38 @@ let studio = [
         'Night' : ["4pm - 8pm"],
       },
       },
+    {
+      name: 'Litte River Studios',
+      image: '',
+      address: '300 NE 71st St, Miami, Florida 33138',
+      cost: '$100/hr (5hr minimum)',
+      phoneNumber: '(305)-632-1581',
+      email: 'alvaro@littleriverstudios.com',
+      schedule: {
+        'Morning' : ["8am - 12pm"],
+        'Afternoon': ["12pm - 4pm"],
+        'Night' : ["4pm - 8pm"],
+      },
+      },
+
+    {
+      name: 'Proper',
+      image: '',
+      address: '3406 NW 7th Ave, Miami, Florida 33127',
+      cost: '$80/hr (2hr minimum)',
+      phoneNumber: '(305)-998-6115',
+      email: 'studiobyproper@gmail.com',
+      schedule: {
+        'Morning' : ["8am - 12pm"],
+        'Afternoon': ["12pm - 4pm"],
+        'Night' : ["4pm - 8pm"],
+      },
+      },
 
 ]
 
+// Calendly personal API token
+// eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2F1dGguY2FsZW5kbHkuY29tIiwiaWF0IjoxNjUxNTgzODE4LCJqdGkiOiIwYzJlMjI5Zi01Mzg1LTRkOTMtYmI4NS1lZjVmN2QzOGY2MDciLCJ1c2VyX3V1aWQiOiJlYzdmNmJlNy0zZGViLTQ2NTUtYjI1My1iNjc0YTViYzM0NmMifQ.DgrQuZXiE6OC9Qj-qKG9oKBAUCp1jYLW4pT5iQE2Yt0
 
 
 mongoose
