@@ -44,6 +44,29 @@ header {
   flex-direction: column;
 }
 
+.aboutUsSection {
+  text-align: center;
+  display: block;
+  width: 100vw;
+}
+
+.column {
+  float: left;
+  width: 22%;
+  padding: 0px 15px;
+}
+
+.card {
+  box-shadow: 0 8px 8px 0 rgba(0, 0.2, 0.2, 0.4);
+  padding: 10px;
+  text-align: center;
+  background-color: #00B7FF;
+  align-items: center;
+  font-family: "Quando";
+  color: white;
+  font-size: 20px;
+}
+
 #footer {
   display: flex;
   flex-direction: row;
